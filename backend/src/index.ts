@@ -15,6 +15,7 @@ app.use(express.json());
 // /api/my/user
 app.use("/api/my/user", myUserRoute);
 
-app.listen(7000, () => {
-  console.log("Server started on localhost:7000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server started on localhost:${PORT}`);
 });
